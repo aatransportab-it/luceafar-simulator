@@ -17,6 +17,22 @@ html, body { background:#fff !important; }
   table { min-width:0; font-size: 9.2pt; }
   a { text-decoration: none; }
 }
+
+  /* Telefon: coloana are 26 px de gardă de fiecare parte pe desktop, ceea ce
+     pe un ecran de 400 px lasă textul să iasă. Plus tabelele, care au o lățime
+     minimă ca să rămână citibile - alea derulează în cutia lor, nu împing
+     pagina. */
+  @media (max-width: 620px) {
+    .page { padding: 28px 16px 48px; }
+    h1 { font-size: 1.5rem; }
+    .meta { gap: 4px 16px; font-size: 0.78rem; }
+    .scroll { -webkit-overflow-scrolling: touch; }
+    table { font-size: 0.82rem; }
+    th, td { padding: 8px 9px; }
+    .step { grid-template-columns: 1fr; gap: 4px; }
+    .contact { grid-template-columns: 1fr; }
+  }
+  html, body { overflow-x: hidden; }
 </style></head><body>
 <title>Luceafărul — propunere de colaborare pentru Overall Company</title>
 
