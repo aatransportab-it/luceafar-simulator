@@ -248,7 +248,12 @@ html, body { background:#fff !important; }
     .contact { grid-template-columns: 1fr; }
     .box, .plain { padding: 13px 14px; }
   }
-  html, body { overflow-x: hidden; }
+  /* Un URL este un singur cuvant. Fara asta, linkul catre simulator - peste
+     patru sute de pixeli in mono - lateste documentul mai mult decat ecranul,
+     si tot restul textului se taie odata cu el. Ascunderea depasirii doar
+     ascundea simptomul. */
+  a, .mono, code { overflow-wrap: anywhere; word-break: break-word; }
+  p { overflow-wrap: break-word; }
 </style>
 
 <div class="page">
