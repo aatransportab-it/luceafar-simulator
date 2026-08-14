@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="ro" data-theme="light"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><style>
+@page { size: A4; margin: 15mm 14mm; }
+html, body { background:#fff !important; }
+@media print {
+  body { font-size: 10.3pt; line-height: 1.48; }
+  .page { max-width:none; padding:0; }
+  h1 { font-size: 20pt; }
+  h2 { font-size: 11.5pt; }
+  section { margin-bottom: 16px; }
+  .box, .plain, table, .num, .cta, .contact { break-inside: avoid; }
+  h1,h2,h3 { break-after: avoid; }
+  .box, .plain, table, th { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .scroll { overflow: visible; }
+  table { min-width:0; font-size: 9.2pt; }
+  a { text-decoration: none; }
+}
+</style></head><body>
+<title>Luceafărul — propunere de colaborare pentru Overall Company</title>
+
+<style>
+  /* A commercial one-pager, not a showcase. Cool grey ground with a single
+     warm accent - the colour of a filament against a winter evening. Mono
+     carries every number, so the commercial terms read as facts. */
+  :root {
+    --ground:  #FCFCFD;
+    --panel:   #F2F3F6;
+    --ink:     #14161C;
+    --ink-2:   #4E5566;
+    --ink-3:   #838A9B;
+    --rule:    #E2E4EB;
+    --rule-2:  #C8CDD9;
+    --accent:  #B8651A;
+    --accent-2:#8A4A10;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0B0D12; --panel: #14171F; --ink: #E9EBF1; --ink-2: #A0A7B8;
+      --ink-3: #6E7587; --rule: #1F232D; --rule-2: #333947;
+      --accent: #E8A055; --accent-2: #F0B878;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0B0D12; --panel: #14171F; --ink: #E9EBF1; --ink-2: #A0A7B8;
+    --ink-3: #6E7587; --rule: #1F232D; --rule-2: #333947;
+    --accent: #E8A055; --accent-2: #F0B878;
+  }
+  :root[data-theme="light"] {
+    --ground: #FCFCFD; --panel: #F2F3F6; --ink: #14161C; --ink-2: #4E5566;
+    --ink-3: #838A9B; --rule: #E2E4EB; --rule-2: #C8CDD9;
+    --accent: #B8651A; --accent-2: #8A4A10;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 15.5px/1.62 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page { max-width: 760px; margin: 0 auto; padding: 56px 26px 72px; }
+
+  .mono, td.n, th, .kicker, code {
+    font-family: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, "Liberation Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1, h2, h3 { margin: 0; text-wrap: balance; }
+
+  h1 {
+    font-size: clamp(1.7rem, 4.4vw, 2.25rem);
+    font-weight: 750;
+    letter-spacing: -0.032em;
+    line-height: 1.12;
+  }
+
+  h2 {
+    font-size: 1.06rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin-bottom: 10px;
+  }
+
+  h3 { font-size: 0.95rem; font-weight: 680; margin-bottom: 4px; }
+
+  p { margin: 0 0 14px; }
+  p:last-child { margin-bottom: 0; }
+
+  a { color: var(--accent-2); text-underline-offset: 3px; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  header {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 22px;
+    margin-bottom: 32px;
+  }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 28px;
+    margin-top: 18px;
+    font-size: 0.8rem;
+    color: var(--ink-2);
+  }
+
+  .meta b { color: var(--ink); font-weight: 620; }
+
+  section { margin-bottom: 30px; }
+
+  ul { margin: 0 0 14px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  li::marker { color: var(--ink-3); }
+
+  .scroll { overflow-x: auto; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    min-width: 420px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+
+  th {
+    font-size: 0.67rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 500;
+    border-bottom: 1px solid var(--rule-2);
+  }
+
+  td.n { text-align: right; white-space: nowrap; font-weight: 600; }
+  tbody tr:last-child td { border-bottom: 0; }
+
+  .box {
+    background: var(--panel);
+    border-left: 3px solid var(--accent);
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+
+  .box p { font-size: 0.93rem; color: var(--ink-2); }
+  .box p strong { color: var(--ink); }
+
+  .plain {
+    border: 1px solid var(--rule-2);
+    padding: 16px 18px;
+    margin: 18px 0;
+  }
+
+  .plain p { font-size: 0.9rem; color: var(--ink-2); }
+
+  .stair {
+    display: grid;
+    gap: 0;
+    border: 1px solid var(--rule);
+    margin: 18px 0;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 18px;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .step:last-child { border-bottom: 0; }
+
+  .step .lvl {
+    font-family: ui-monospace, Consolas, monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    padding-top: 3px;
+  }
+
+  .step p { font-size: 0.89rem; color: var(--ink-2); margin: 4px 0 0; }
+
+  .cta {
+    border-top: 2px solid var(--ink);
+    padding-top: 22px;
+    margin-top: 38px;
+  }
+
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 14px 28px;
+    margin-top: 16px;
+    font-size: 0.9rem;
+  }
+
+  .contact div span {
+    display: block;
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin-bottom: 2px;
+  }
+
+  footer {
+    margin-top: 38px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.76rem;
+    color: var(--ink-3);
+  }
+</style>
+
+<div class="page">
+
+  <header>
+    <span class="kicker">Propunere de colaborare · sezonul 2026–2027</span>
+    <h1>Proiecție laser pentru iluminat festiv — o linie nouă, fără investiție</h1>
+    <div class="meta">
+      <div>Către: <b>Overall Company</b> — Șelimbăr, Sibiu · în atenția domnului <b>Adelin Vaicăr</b></div>
+      <div>De la: <b>Luceafărul</b> — Baiatul Digital Solutions SRL</div>
+      <div>August 2026</div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Propunerea, pe scurt</h2>
+    <p>
+      Vă propunem să adăugați proiecția laser la oferta dumneavoastră de iluminat,
+      ca serviciu de sezon. Modelul este exact cel pe care l-ați numit:
+      <strong>închiriere</strong>. Echipamentul, programarea și operarea rămân la
+      noi; dumneavoastră aduceți clientul și relația.
+    </p>
+    <div class="box">
+      <p>
+        <strong>Nu vă cerem nicio investiție și niciun om în plus.</strong> Nu
+        cumpărați echipament, nu țineți stoc, nu vă asumați riscul tehnic. Pentru
+        o firmă care face deja audit, proiectare și soluții de iluminat, este un
+        produs nou în discuțiile pe care le purtați oricum — nu o direcție nouă
+        de business.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Produsul principal: bulevardul</h2>
+    <p>
+      Proiectoare montate pe <strong>stâlpii de iluminat care există deja</strong>,
+      pe axul unei promenade pietonale. Fiecare mătură propriul evantai de
+      fascicule, decalate între ele, astfel încât efectul parcurge strada.
+    </p>
+    <p>
+      Diferența față de orice altceva se montează de sărbători: oamenii nu privesc
+      instalația de la distanță — <strong>trec prin ea</strong>. Este singurul
+      lucru pe care iluminatul decorativ, oricât de bine executat, nu îl poate
+      oferi, pentru că el rămâne întotdeauna un obiect la care te uiți.
+    </p>
+
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Parametru</th><th>Valoare</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Acoperire</td><td class="n">100 m cu 5 proiectoare</td></tr>
+          <tr><td>Distanță între stâlpi</td><td class="n">optim 20–25 m · până la 30 m fără compromis</td></tr>
+          <tr><td>Înălțime de montare</td><td class="n">7 m</td></tr>
+          <tr><td>Fasciculul cel mai jos</td><td class="n">7,0 m deasupra trotuarului</td></tr>
+          <tr><td>Consum</td><td class="n">~250 W / proiector</td></tr>
+          <tr><td>Program</td><td class="n">buclă de 48 s, fără operator</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="plain">
+      <p>
+        <strong>Un avantaj administrativ care contează mai mult decât pare:</strong>
+        montajul fiind pe stâlpii municipalității și nu pe fațade, dispar
+        asociațiile de proprietari, consolele pe clădiri și discuția despre cine
+        răspunde pentru ele. Un singur proprietar, un singur traseu de curent, o
+        singură aprobare.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Al doilea produs: fațada — și tot ce se poate scrie pe ea</h2>
+    <p>
+      Grafică desenată pe o clădire: brad, siluete în mișcare, fulgi, clopoței,
+      plus urarea municipalității cu diacritice românești corecte. Buclă de 2:20,
+      șapte secvențe.
+    </p>
+    <p>
+      Este complementul natural al bulevardului, dintr-un motiv tehnic:
+      <strong>grafica se desenează pe zid, deci funcționează pe orice vreme</strong>,
+      în timp ce fasciculele au nevoie de umezeală în aer ca să fie vizibile.
+      Împreună, instalația nu mai depinde de meteo.
+    </p>
+
+    <h3>Se personalizează integral</h3>
+    <p>
+      Textul, culorile și ritmul se schimbă din program, nu din echipament — deci
+      un client poate avea altceva în fiecare seară fără să urce nimeni pe stâlp.
+    </p>
+    <ul>
+      <li><strong>Numele orașului</strong>, cu diacritice corecte — Ș și Ț cu virgulă, nu cu sedilă.</li>
+      <li><strong>Stema municipiului</strong> sau orice siglă, importată din fișier vectorial (SVG).</li>
+      <li><strong>Logo de sponsor</strong>, ca secvență separată în buclă.</li>
+      <li><strong>Mesaje de eveniment</strong> — Zilele Orașului, 1 Decembrie, Paște, aniversări.</li>
+    </ul>
+
+    <div class="box">
+      <p>
+        <strong>Consecința comercială:</strong> instalația nu mai e un consumabil
+        de Crăciun. Aceleași proiectoare, montate o dată, pot servi patru–cinci
+        evenimente pe an, cu program schimbat de la distanță. Iar un slot de
+        sponsor în buclă este o sursă de cofinanțare pe care o municipalitate o
+        poate folosi ca să-și acopere o parte din cost.
+      </p>
+    </div>
+
+    <h3>Cât costă un logo, în termeni de laser</h3>
+    <p>
+      Un laser nu umple suprafețe, desenează linii. Orice siglă se reface deci ca
+      desen de contur — operație pe care o facem noi, din fișierul vectorial
+      primit. Măsurat pe un logo real, cu două contururi:
+    </p>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Prelucrare</th><th>Puncte / cadru</th><th>Cadre / s la 30 kpps</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Import brut</td><td class="n">1 218</td><td class="n">24,6</td></tr>
+          <tr><td>Optimizat</td><td class="n">855</td><td class="n">35,1</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      Peste circa 24 de cadre pe secundă ochiul nu mai percepe pâlpâire, deci un
+      logo optimizat are marjă confortabilă. <strong>Verificarea o facem înainte
+      de a accepta o siglă</strong>, iar dacă un desen este prea încărcat ca să
+      stea stabil, spunem asta dinainte și propunem o variantă simplificată — nu
+      livrăm o imagine care tremură.
+    </p>
+
+    <div class="plain">
+      <p>
+        <strong>Ce nu se poate:</strong> logo-uri fotografice, degradeuri, umbre
+        și suprafețe pline. Sigla trebuie să existe ca desen de linie, sau să
+        poată fi redesenată ca atare — ceea ce, pentru majoritatea stemelor și a
+        logo-urilor corporate, se face fără să se piardă recunoașterea.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Siguranța, verificată — nu declarată</h2>
+    <p>
+      Un laser de spectacol deasupra unei zone pietonale fără bariere se apără
+      printr-un singur lucru: fasciculele trebuie să treacă pe deasupra tuturor,
+      întotdeauna. Nu prin comportamentul publicului.
+    </p>
+    <p>
+      Motorul calculează, pentru fiecare cap în parte, cel mai jos punct atins de
+      orice rază din tot câmpul de scanare — nu doar de axa de țintire, care este
+      greșeala obișnuită. La geometria propusă rezultatul este
+      <strong>7,0 m deasupra trotuarului, față de un minim uzual de 4 m</strong>,
+      iar cifra se predă în scris, per stâlp.
+    </p>
+    <div class="box">
+      <p>
+        Geometria ține fasciculele <strong>sub linia acoperișurilor</strong>, deci
+        nu se pune problema unei notificări aeronautice. Fasciculele ajung pe
+        fațada opusă între 11 și 35 m înălțime — <strong>acolo unde sunt
+        ferestre</strong>, iar la 24 m distanță un fascicul de 3 W este încă
+        periculos pentru ochi.
+      </p>
+      <p>
+        De aceea fiecare instalație pe o stradă cu blocuri pe ambele laturi are
+        nevoie de <strong>zone de stingere pe fațada opusă</strong>, definite pe
+        teren, după ferestrele reale. Motorul stinge fasciculul în acele
+        sectoare. Este o etapă de instalare, nu o opțiune — și este motivul
+        pentru care o promenadă deschisă pe o latură (parc, faleză, piață) este
+        un amplasament mai simplu decât un bulevard închis între blocuri.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>De ce se potrivește cu ce faceți deja</h2>
+    <ul>
+      <li><strong>Aceiași clienți.</strong> Primării, administratori de spații, companii — exact cei cu care discutați audit și soluții de iluminat.</li>
+      <li><strong>Aceeași conversație.</strong> Vine natural după un audit sau un proiect de iluminat, ca element de imagine peste partea funcțională.</li>
+      <li><strong>Fereastră de timp care nu se suprapune.</strong> Montaj în noiembrie, demontaj în ianuarie — perioada în care proiectele de eficiență energetică sunt oricum mai lente.</li>
+      <li><strong>Un argument de diferențiere.</strong> La o ofertă de iluminat, un competitor poate egala corpurile și prețul. Nu poate egala un element pe care nu îl are.</li>
+    </ul>
+
+    <h3>Două forme posibile de colaborare</h3>
+    <div class="stair">
+      <div class="step">
+        <div class="lvl">Varianta A</div>
+        <div>
+          <h3>Intermediere</h3>
+          <p>
+            Ne prezentați clientului, noi contractăm direct și livrăm. Dumneavoastră
+            primiți un comision din valoarea contractului. Zero implicare
+            operațională, zero risc.
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="lvl">Varianta B</div>
+        <div>
+          <h3>Revânzare</h3>
+          <p>
+            Contractați dumneavoastră cu clientul, la prețul dumneavoastră, iar
+            noi livrăm ca subcontractor la un preț ferm agreat. Marja rămâne la
+            dumneavoastră, iar clientul rămâne al dumneavoastră.
+          </p>
+        </div>
+      </div>
+    </div>
+    <p>
+      Varianta B este cea pe care o recomandăm dacă intenția este să rămână un
+      serviciu al firmei dumneavoastră pe termen lung. Varianta A este mai
+      potrivită pentru un prim proiect, până se vede cum funcționează.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ce se poate vedea acum</h2>
+    <p>
+      Simulatorul rulează în browser și se deschide direct pe telefon, fără
+      instalare:
+    </p>
+    <p class="mono"><a href="https://aatransportab-it.github.io/luceafar-simulator/?client&amp;oras=SIBIU">aatransportab-it.github.io/luceafar-simulator/?client&amp;oras=SIBIU</a></p>
+    <p>
+      Nu este o animație. Fasciculele sunt calculate din unghiul real de scanare
+      al proiectorului, din poziția fiecărui stâlp și din inerția oglinzilor
+      galvanometrice — iar cifra de siguranță afișată provine din aceeași
+      verificare care validează geometria, nu este scrisă alături de ea.
+    </p>
+    <div class="plain">
+      <p>
+        <strong>Sibiu ar fi pilotul natural</strong> — e aproape de dumneavoastră,
+        are o promenadă pietonală potrivită, iar iluminatul festiv de acolo nu
+        este blocat în concesiunea unui operator național, cum se întâmplă în
+        alte orașe mari. Dar orice oraș din zonă funcționează la fel.
+      </p>
+      <p>
+        <strong>Ca să fim corecți din start:</strong> motorul, simulatorul și
+        verificarea de siguranță sunt complete și pot fi demonstrate oricând.
+        Prima instalație pe teren este programată pentru sezonul acesta. Dacă
+        preferați o validare pe hardware înaintea oricărei discuții comerciale, o
+        putem organiza în septembrie–octombrie.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Model comercial</h2>
+    <p>
+      Închiriere pe sezon, perioada standard 1 decembrie – 7 ianuarie. În preț
+      intră proiectoarele, programul adaptat pe numele orașului, reglajul,
+      verificarea de siguranță în scris, demontajul și intervenție în 24 de ore pe
+      toată durata.
+    </p>
+    <div class="plain">
+      <p>
+        <strong>Prețul se construiește din numărul de proiectoare</strong>, iar
+        acela depinde direct de distanța reală dintre stâlpi: la 20 m sunt
+        necesare cinci bucăți pentru 100 m, la 28 m doar patru — o diferență de
+        circa 27% pe același traseu. De aceea nu punem aici o cifră care ar fi
+        ghicită: oferta fermă se emite în 48 de ore de la primirea măsurătorilor.
+      </p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Pasul următor</h2>
+    <p>
+      O discuție de 30 de minute în care vă arăt simulatorul și trecem prin
+      modelul comercial. Dacă la final considerați că nu este pentru
+      dumneavoastră, ne oprim acolo.
+    </p>
+    <div class="contact">
+      <div><span>Persoană de contact</span>Lucian Lică, administrator</div>
+      <div><span>Email</span>lucian@helpix.ro</div>
+      <div><span>Societate</span>Baiatul Digital Solutions SRL</div>
+    </div>
+  </div>
+
+  <footer>
+    Toate cifrele tehnice din acest document provin din simularea fizică a
+    instalației și pot fi verificate în simulatorul public. Cifrele comerciale se
+    confirmă după măsurătorile de pe teren.
+  </footer>
+
+</div>
+</body></html>
